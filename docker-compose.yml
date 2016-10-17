@@ -1,8 +1,9 @@
 
+
 nodeapp:
   build: .
-  command: tail -f /dev/null
-  ports:
+  command: tail -f /dev/null # this way, the container will survive even if the app crashes
+  ports: #ports i want to open
     - "3000:3000"
-  volumes:
+  volumes: #volumes i want to mount
     - .:/opt/src

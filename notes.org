@@ -1,0 +1,35 @@
+* Docker
+
+#+BEGIN_SRC 
+docker build -t joshdvir/node_test .
+
+docker images | grep node # -> container id
+
+docker run -it <id> bash
+
+
+docker run -p 3000:3000 --rm -it <id>
+
+#+END_SRC
+
+* docker-compose
+
+use a docker-compose file for running the docker container so that you can share it with others
+
+#+BEGIN_SRC 
+
+docker-compose up
+
+docker ps # -> id
+
+docker exec -it <id> bash # new way of running the container
+
+# npm install
+# node ./app.js
+
+#+END_SRC
+
+
+Q: How do you cleanly stop a docker container
+
+* circle CI
